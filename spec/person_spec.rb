@@ -45,9 +45,7 @@ RSpec.describe Person do
 
     it 'can check if craft can be built with available supplies' do
       hector = Person.new({name: 'Hector', interests: ['sewing', 'millinery', 'drawing']})
-      toni = Person.new({name: 'Toni', interests: ['sewing', 'knitting']})
       sewing = Craft.new('sewing', {fabric: 5, scissors: 1, thread: 1, sewing_needles: 1})
-      knitting = Craft.new('knitting', {yarn: 20, scissors: 1, knitting_needles: 2})
 
       actual   = hector.can_build?(sewing)
       expected = false
