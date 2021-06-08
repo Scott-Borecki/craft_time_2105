@@ -16,11 +16,8 @@ class Person
 
   def can_build?(craft)
     craft.supplies_required.all? do |supply|
-      if @supplies[supply[0].to_s].nil?
-        false
-      else
-        @supplies[supply[0].to_s] >= craft.supplies_required[supply[0]]
-      end
+      @supplies[supply[0].to_s] >= craft.supplies_required[supply[0]] unless
+        @supplies[supply[0].to_s].nil?
     end
   end
 end
