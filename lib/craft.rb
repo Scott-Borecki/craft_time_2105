@@ -8,7 +8,7 @@ class Craft
   end
 
   def num_supply_types
-    @supplies_required.keys.count
+    @supplies_required.keys.length
   end
 
   def supply_list
